@@ -1,42 +1,340 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-7">
-            <div id="code"></div>
-                <div class="overview">
-                    <input type="hidden" value="{{ gig._id }}" id="gig_id" />
-                    <div class="template-card">
-                        <div class="name">
-                            <h2 class="h2-size">{{gig.title}}</h2>
-                            <hr />
-                            <img src="{{gig.picture}}" class="image-test">
-                        </div>
-                    </div>
-                </div>
+<!DOCTYPE html>
+<html lang="es">
+	<html>
+		<head>
+			<title>Detalle del servicio.</title>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+			<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+			<link rel="stylesheet" type="text/css" href="../css/stylesAcco.css">
+			<link rel="stylesheet" type="text/css" href="../css/servicedetail.css">
+			<script src="../js/jquery.js" type="text/javascript"></script>
+		</head>
+		<body>
+		<div class="container main-container">
+			<div class="only-f">
+				<div class="row mmccc">
+					<section class="col-md-7 info-container">
+						<div class="row hotel-info" id="short">
+							<div class="rel-tittle col-md-12 m-auto">
+								<h1 class="hotel-name" id="hotelName">{{gig.title}}</h1>
+								<div><span class="theseinfothatidontunderstand" id="loftInfo"><strong>{{gig.category}}</strong></span></div>
+								<span class="the-city mr-3" id="city"><strong>Bogota</strong></span>
+								<div class="main-Evaluation-pres">
+									<span class="icon-star-full"></span>
+									<span class="icon-star-full"></span>
+									<span class="icon-star-half"></span>
+									<span class="icon-star-empty"></span>
+									<span class="icon-star-empty"></span>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<section class="spot-info col-md-11" id="spotInfo">
+								<article class="pr-md-2 pl-md-2 text-justify">
+									<h2>Descripcion</h2>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+										cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+										proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+									</p>
+									<div class="spot-info-table">
+										<div>Lugar:</div>
+										<p>Espacio remodelado tipo Loft.</p>
+									</div>
+									<div class="spot-info-table">
+										<div>Atencion a los huespedes:</div>
+										<p>Siempre que sea necesario.</p>
+									</div>
+								</article>
+							</section>
+						</div>
+						<div class="row">
+							<section class="services col-md-11">
+								<h2>Servicios</h2>
+								<div class="row m-auto">
+									<div class="col-6 prin-service" id="prinService1"><span class="icon-connection"> </span> Wifi</div>
+									<div class="col-6 prin-service" id="prinService2"><span class="icon-spoon-knife"> </span> Cocina</div>
+								</div>
+								<div class="row m-auto">
+									<div class="col-6 prin-service" id="prinService3"><span class="icon-tv"> </span> Television</div>
+									<div class="col-6 prin-service" id="prinService4"><span class="icon-airplane"> </span> Avion a domicilio(Uber)</div>
+								</div>
+								<div class="row">
+									<button type="button" class="btn btn-outline-info more-serInfo" data-toggle="modal" data-target="#servicesModal">Mas informacion</button>
+								</div>
+							</section>
+						</div>
+						
+						<div class="row">
+							<section class="hotel-location container">
+								<div class="col-md-11">
+									<h2><span class="icon-location2"></span>Ubicacion</h2>
+									<div>
+										<button class="btn btn-outline-info more-locInfo" type="button" data-toggle="collapse" data-target="#collapseLocInfo" aria-expanded="false" aria-controls="collapseLocInfo">
+										Info sobre el sector
+										</button>
+									</div>
+									<div class="collapse location-info" id="collapseLocInfo">
+										<div class="card card-body location-info2">
+											Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+										</div>
+									</div>
+									<iframe class="location-map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5620.349285525542!2d-75.52656297887712!3d5.073404723908522!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e476ffcd5feb5d3%3A0xf4a61d1e6c583900!2sObservatorio+Vulcanol%C3%B3gico+y+Sismol%C3%B3gico+Manizales!5e0!3m2!1ses!2sco!4v1539232516318" width="" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+								</div>
+							</section>
+						</div>
+						<div class="row">
+							<section class="evaluations-commentaries col-md-11">
+								<div class="only-f">
+									
+									<div class="evaluations col-12">
+										<div class="row">
+											<div class="col-md-6 wwe">
+												<h3>Evaluaciones · <span id="evaNum">145</span></h3>
+											</div>
+											<div class="col-md-6 m-auto">
+												<div class="main-Evaluation">
+													<span class="icon-star-full"></span>
+													<span class="icon-star-full"></span>
+													<span class="icon-star-half"></span>
+													<span class="icon-star-empty"></span>
+													<span class="icon-star-empty"></span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="eva-parameters col-md-11 m-auto">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="row com-par">
+													<div class="parameter col-6">Veracidad</div>
+													<div class="parameter-calification col-6">
+														<span class="icon-star-full"></span>
+														<span class="icon-star-full"></span>
+														<span class="icon-star-full"></span>
+														<span class="icon-star-full"></span>
+														<span class="icon-star-full"></span>
+													</div>
+												</div>
+												<div class="row com-par">
+													<div class="parameter col-6">Comunicacion</div>
+													<div class="parameter-calification col-6">
+														<span class="icon-star-full"></span>
+														<span class="icon-star-full"></span>
+														<span class="icon-star-full"></span>
+														<span class="icon-star-half"></span>
+														<span class="icon-star-empty"></span>
+													</div>
+												</div>
+												<div class="row com-par">
+													<div class="parameter col-6" id="">Limpieza</div>
+													<div class="parameter-calification col-6">
+														<span class="icon-star-full"></span>
+														<span class="icon-star-full"></span>
+														<span class="icon-star-full"></span>
+														<span class="icon-star-half"></span>
+														<span class="icon-star-empty"></span>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<div class="row com-par">
+													<div class="parameter col-6">Ubicacion</div>
+													<div class="parameter-calification col-6">
+														<span class="icon-star-full"></span>
+														<span class="icon-star-full"></span>
+														<span class="icon-star-full"></span>
+														<span class="icon-star-half"></span>
+														<span class="icon-star-empty"></span>
+													</div>
+												</div>
+												<div class="row com-par">
+													<div class="parameter col-6">Llegada</div>
+													<div class="parameter-calification col-6">
+														<span class="icon-star-full"></span>
+														<span class="icon-star-full"></span>
+														<span class="icon-star-full"></span>
+														<span class="icon-star-half"></span>
+														<span class="icon-star-empty"></span>
+													</div>
+												</div>
+												<div class="row com-par">
+													<div class="parameter col-6">Calidad</div>
+													<div class="parameter-calification col-6">
+														<span class="icon-star-full"></span>
+														<span class="icon-star-full"></span>
+														<span class="icon-star-full"></span>
+														<span class="icon-star-half"></span>
+														<span class="icon-star-empty"></span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row ccmm">
+									<section class="commentaries col-md-12 m-auto">
+										<div class="commentary row">
+											<div class="commentary-autor col-3">
+												<div class="commentary-autor-img">
+													<img src="../imgs/user-post3.jpg">
+												</div>
+												<a href="" class="commentary-autor-name">Carmenza</a>
+												<span class="post-date" id="commentDate">20 de sept 2018</span>
+											</div>
+											<div class="commentary-content col-9">
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+													quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+													consequat.<br><br>
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+													quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+													consequat.
+												</p>
+											</div>
+										</div>
+										<div class="commentary row">
+											<div class="commentary-autor col-3">
+												<div class="commentary-autor-img">
+													<img src="../imgs/peñalosa.jpg">
+												</div>
+												<a href="" class="commentary-autor-name">Peñalosa</a>
+												<span class="post-date" id="commentDate">20 de sept 2018</span>
+											</div>
+											<div class="commentary-content col-9">
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													tempor incididunt ut labore et dolore magna aliqua.
+												</p>
+											</div>
+										</div>
+										<div class="commentary row">
+											<div class="commentary-autor col-3">
+												<div class="commentary-autor-img">
+													<img src="../imgs/user-post.jpg">
+												</div>
+												<a href="" class="commentary-autor-name">Mariana</a>
+												<span class="post-date" id="commentDate">20 de sept 2018</span>
+											</div>
+											<div class="commentary-content col-9 ">
+												<p>
+													Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+													tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+													quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+													consequat.
+												</p>
+											</div>
+										</div>
+									</section>
+								</div>
+							</section>
+						</div>
+						<div class="row">
+							<section class="container">
+								<div class="row">
+								<div class="policies col-md-6">
+									<h2>Politicas</h2>
+									<ul>
+										<li class="policy" id="pol0">Prohibido fumar</li>
+										<li class="policy" id="pol1">No se admiten mascotas</li>
+										<li class="policy" id="pol3">No se admiten fiestas o eventos</li>
+										<li class="policy" id="pol4">La hora de llegada es flexible</li>
+										<li class="policy" id="pol5">Salida antes de las 16:00</li>
+										<li class="policy" id="pol6">Llegada con acceso libre con personal del edificio</li>
+									</ul>
+									<button class="btn btn-outline-info more-poliInfon" type="button" data-toggle="collapse" data-target="#policyCollap" aria-expanded="false" aria-controls="policyCollap">
+									Ver mas sobre las politicas
+									</button>
+									<div class="collapse" id="policyCollap">
+										<div class="card card-body more-policy">
+											<ul>
+												<li class="policy" id="pol7">Limpieza, buen humor y alegría!
+												Recomendamos particularmente apagar la luz cuando no haga uso de ella y salga del apartamento. Gracias.</li>
+												<li class="policy" id="pol8">Caminar descalzo</li>
+												<li class="policy" id="pol9">Ya inventese otra usted</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="policies col-md-6">
+									<h3>Aspectos a tener en cuenta</h3>
+									<ul>
+										<li class="policy">Hay zonas comunes que se comparten</li>
+										<li class="policy">Rondan gatos callejeros en las cercanias</li>
+									</ul>
+								</div>
+								</div>
+							</section>
+						</div>
+						<div class="row">
+							<section class="container ">
+								<div class="col-md-12 cancelations-container">
+									<h2>Cancelaciones</h2>
+									<div class="can-con">
+										<span class="cancel-type" id="cancelType">Moderada - Cancelacion gratuita durante 8 horas</span>
+										<p>Después de esto, cancela hasta 5 días antes de la fecha de llegada y obtén un reembolso total, menos la comisión por servicio.</p>
+									</div>
+								</div>
+							</section>
+						</div>
+					</section>
+					<aside class="col-md-5 d-none d-md-block">
+						<div class="aside">
+							<div class="row">
+							<section class="col-11 m-auto">
+								<h2>Ofertante</h2>
+								<div class="row arw">
+									<div class="col-md-12 amphi-rel-info m-auto">
+										<div class="amphi-img">
+											<a href=""><img src="../imgs/user-post2.jpg"></a>
+										</div>
+										<div class="amphi-name">
+											<h3><a href="">Laura Salazar</a></h3>
+											<div>
+												<span class="icon-star-full amphi-eva"></span> <span>217</span>
+												<span class="icon-sun amphi-cer"></span> <span>Certificado/a</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-12">
+										<div class="amphi-info">
+											<div class="amphi-info-in">
+												<strong>De: </strong>Bogota, Colombia.
+											</div>
+											<div class="amphi-info-in">
+												<div><strong>Registro en: </strong><span>Septiembre de 2016.</span></div>
+											</div>
+											<div class="amphi-info-in">
+												<div><strong>Idiomas: </strong><span>Español, Ingles.</span></div>
+											</div>
+											<button class="btn btn-success">
+												Iniciar chat
+											</button>
+										</div>
+									</div>
+								</div>
+							</section>
+						</div>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</div>
+		<div class="aside2 fixed-bottom d-block d-md-none d-lg-none">
+			<button class="btn btn-outline-info btn-block" data-toggle="modal" data-target="#bookModal"><h3>Reserva ya </h3>desde $<span id="priceAs">10.000</span></button>
+		</div>
+		<script src="../js/jquery.js"></script>
+		<script src="../js/bootstrap.bundle.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
-                <div class="overview">
-                    <div class="about-card">
-                        <div class="name">
-                            <h2 class="h2-size">About gig</h2>
-                            <hr />
-                            <h4>{{gig.about}}</h4>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        <div class="col-md-3">
-            <div class="overview">
-                <div class="order-card">
-                    <div class="name">
-                        <h3>${{gig.price}} Order Details</h3>
-                        <a href="/checkout/single-package/{{gig._id}}" class="btn btn-success btn-lg">
-                            Proceed to order
-                        </a>
-                        <button class="btn btn-success btn-lg space-left" id="add_to_cart"><i class="fa fa-shopping-cart"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-</div>
+		
+	</body>
+</html>

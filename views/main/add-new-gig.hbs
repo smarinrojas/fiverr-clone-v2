@@ -1,41 +1,157 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <div class="overview">
-                <div class="text-center">Enter you gigs details</div>
-                <br>
-                <div class="new-gig-card">
-                    <form method="post">
-                        <div class="form-group">
-                            <label>Gig title</label>
-                            <input type="text" class="form-control" placeholder="I will do something" name="gig_title">
-                        </div>
+<html>
 
-                        <div class="form-group">
-                            <label for="">Gig price</label>
-                            <input type="text" class="form-control" placeholder="Please enter price you want to set" name="gig_price">
-                        </div>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/stylesAcco.css">
 
-                        <div class="form-group">
-                            <label for="">Gig category</label>
-                            <select name="gig_category" class="form-control">
-                                <option>Programming</option>
-                                <option>Website</option>
-                                <option>Design</option>
-                                <option>Marketing</option>
-                                <option>Others</option>
-                            </select>
-                        </div>
 
-                        <div class="form-group input-group-lg">
-                            <label>Gig Description</label>
-                            <input type="text" class="form-control" placeholder="Describe your gig" name="gig_about">
-                        </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 
-                        <button type="submit" class="btn btn-success btn-lg">Submit</button>
-                    </form>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+    <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tagsinput/0.8.0/bootstrap-tagsinput.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+
+    <script>
+        var simplemde;
+        $(document).ready(function () {
+            simplemde = new SimpleMDE({
+                element: document.getElementById("MyID"),
+                spellChecker: false
+            });
+            $('#btnPublish').click(function () {
+
+                debugger;
+                $('#modalSavingExperience').modal('show');
+
+                var experienceObject = {
+                    includes: $('#includes').val(),
+                    images: $('#images').val(),
+                    amount: $('#amount').val(),
+                    currency: $('#currency').val(),
+                    location: $('#location').val(),
+                    tags: $('#tags').val(),
+                    content: simplemde.value(),
+                }
+
+                $.getJSON('../experience/save', experienceObject, function (res) {
+                    $('#modalSavingExperience').modal('hide');
+
+                    if (!res['success']) {
+                        $('#errorMessage').show();
+                        $('#errorMessage').text(res.message);
+                        return;
+                    }
+
+                    $('#successMessage').show();
+                    $('#successMessage').text(res.message);
+                    console.log(res);
+                });
+
+            });
+
+        });
+    </script>
+
+    <style>
+        #dvEditor {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container main-container">
+
+        <div class="row">
+            <div class="col-md-7">
+
+                <div class="alert alert-danger" role="alert" style="display: none">
+                    <strong>Ha ocurrido un error!</strong>
+                    <p id="errorMessage"></p>
+                </div>
+
+                <div class="alert alert-success" role="alert" style="display: none">
+                    <strong>Bien hecho!.</strong>
+                    <p id="successMessage"></p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-7">
+                <div id="dvEditor">
+                    <textarea id="MyID"></textarea>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <form>
+                    <div class="form-group">
+                        <label for="title">Titulo del servicio</label>
+                        <input type="text" class="form-control" id="title" aria-describedby="emailHelp"
+                            placeholder="Ej. Disfruta del verdadero sabor del café.">
+                        <small id="emailHelp" class="form-text text-muted">El titulo que aparecerá en los resultados de
+                            búsqueda, haz un llamado a la acción.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="images">Imágen</label>
+                        <input type="text" class="form-control" id="images" placeholder="Imágenes">
+                        <small id="emailHelp" class="form-text text-muted">.</small>
+                    </div>
+                    <div class="form-inline">
+                        <label for="amount">Costo aproximado por persona</label>
+                        <input type="text" class="form-control" id="amount" placeholder=""> -
+                        <input type="text" class="form-control" id="currency" placeholder="USD">
+                        <small id="emailHelp" class="form-text text-muted">Cantidad de dinero presupuestada para esta
+                            actividad por persona.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Ubicación</label>
+                        <input type="text" class="form-control" id="location" placeholder="New york">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+                    <div class="form-group">
+                        <label for="tags">Categoría</label>
+                        <input type="text" class="form-control" id="tags" placeholder="Ej. camping, naturaleza">
+                        <small id="emailHelp" class="form-text text-muted">Caracteristicas mas destacadas de tu
+                            experiencia.</small>
+                    </div>
+                </form>
+
+                <input type="button" class="btn btn-primary" id="btnPublish" value="Publicar">
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="modalSavingExperience">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Guardando experiencia..</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Guardando..</p>
+                </div>
+                <div class="modal-footer">
                 </div>
             </div>
         </div>
     </div>
-</div>
+</body>
+
+</html>

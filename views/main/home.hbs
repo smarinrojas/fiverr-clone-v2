@@ -1,40 +1,46 @@
-<div class="hero">
-	<div class="container">
-		<div class="row">
-			<div class="hero-heading">
-				Service for lean microentrepreneurs  <br />
-				Find it on Fiverclone.
-				<p>Browse. Buy. Done. </p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-offset-3 col-md-6">
-				<form method="post" action="/search">
-					<div class="input-group input-group-lg">
-						<input type="text" class="form-control" name="search_input" placeholder="What are you searching?..">
-						<span class="input-group-btn">
-							<input type="submit" class="btn btn-success" value="Find gigs">
-						</span>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
+<header class="masthead text-center">
+    <div class="overlay"></div>
+    <!--<div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          <h1 class="mb-5">
+			  Hola!, Necesitas cotizar? averiguar?, te puedo conectar por chat en minutos con alguien que puede ayudarte.
+		  </h1>
+        </div>
+        <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+          <form method="post" action="/search">
+            <div class="form-row">
+              <div class="col-12 col-md-9 mb-2 mb-md-0">
+                <input type="search" name="search_input" class="form-control form-control-lg" placeholder="Ej. Arreglar computador.">
+              </div>
+              <div class="col-12 col-md-3">
+                <button type="submit" class="btn btn-block btn-lg btn-primary">Buscar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>-->
+</header>
+
 <div class="container section">
-	<h1>
-		Newest Gigs
-	</h1>
+
+	<div class="row">
 		{{#each gigs}}
-		<div class="col-md-3">
-			<div class="gig-card">
-				<a href="/service_detail/{{ _id }}">
-					<img src="/img/copywrite.jpg" />
-					<h4>{{title}}</h4>
-					<h3>${{price}}</h3>
-				</a>
-			</div>
-		</div>
-		{{/each}}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img class="card-img-top" src="/img/copywrite.jpg" alt="Card image cap">
+            <div class="card-body">
+			      <h5 class="card-title">
+              <a href="/service_detail/{{ _id }}">{{title}}</a></h5>
+              <p class="card-text">{{description}}</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">Categoria</small>
+              </div>
+            </div>
+          </div>
+        </div>
+		{{/each}}       
+      </div>
 	</div>
 </div>

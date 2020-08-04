@@ -1,38 +1,38 @@
 
 <div class="container">
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
-      <h1 class="space-top text-center">Signup</h1>
-
+  <div class="col-md-6">
+    <h1>Bienvenido</h1>
+    <p> Ofrece tu servicios de manera inteligente!, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+  </div>
+  <div class="col-md-6">
     {{#if message }}
     <div class="alert alert-success alert-dismissible">
       <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       {{ message  }}
     </div>
     {{/if}}
-
-      <hr />
-
       <form role="form" method="post">
 
         <div class="form-group">
-          <label for="name">Name:</label>
+          <label for="name">Nombre Empresa / Persona:</label>
           <input type="text" class="form-control" name="username">
         </div>
         <div class="form-group">
-          <label for="email">Email address:</label>
+          <label for="email">Correo electronico :</label>
           <input type="email" class="form-control" name="email">
         </div>
         <div class="form-group">
-          <label for="password">Password:</label>
+          <label for="password">Clave :</label>
+          <input type="password" class="form-control" name="password">
+        </div>
+        <div class="form-group">
+          <label for="password">Repetir Clave :</label>
           <input type="password" class="form-control" name="password">
         </div>
 
-      <button type="submit" class="btn btn-success">Submit</button>
-
+      <button type="submit" class="btn btn-success">Registrarme</button>
     </form>
-    <hr />
-
   </div>
 </div>
 </div>

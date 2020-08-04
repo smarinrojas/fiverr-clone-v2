@@ -9,6 +9,9 @@ const GigSchema = new Schema({
     ref: 'User'
   },
   title: String,
+  city : Number,
+  country : Number,
+  description : String,
   category: String,
   about: String,
   price: Number,

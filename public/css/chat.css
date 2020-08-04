@@ -214,9 +214,10 @@ i.material-icons.sent {
 /*chat message section*/
 .chatbox {
 	background-color: #fff;
+	width: 100%;
 }
 .chat-msgs {
-	height: 81vh;
+	height: 77vh;
 	padding: 35px 15px 0;
 	overflow-x: hidden;
 	overflow-y: auto;

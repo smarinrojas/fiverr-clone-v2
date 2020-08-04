@@ -5,7 +5,7 @@ const Promocode = require('../models/promocode');
 const async = require('async');
 
 const algoliasearch = require('algoliasearch')
-var client = algoliasearch('B208GQV2JF', '9f799c2601799fed175ca3b4bd9bb598');
+var client = algoliasearch('LV6AP4Y43U', '77ee3e52c1afa04d79a56b7082caa4df');
 var index = client.initIndex('GigSchema');
 
 //GET request to /

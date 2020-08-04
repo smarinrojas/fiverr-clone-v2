@@ -1,0 +1,635 @@
+
+body{
+	margin: 0px;
+}
+
+a{
+	color: #04B4AE;
+}
+
+.btn{
+	border-radius: 1px;
+	color:#585858;
+}
+.navbar
+{
+    background-color : #fff;
+    border-bottom : 1px solid rgba(0,0,0,.1);
+}
+
+.nav-item a{
+	color: #000;
+}
+
+.nav-item a:hover{
+	color: #01DFD7;
+}
+
+.navbar-brand{
+	color: #01DFD7;
+}
+
+
+button{
+	color: #585858;
+}
+
+/*---- CUERPO---*/
+
+.main-container{
+	margin-top: 50px;
+}
+
+.only-f{
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: solid 1px #E6E6E6;
+}
+
+.info-container{
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+
+
+.rel-tittle{
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.hotel-name{
+	font-size: 45px;
+}
+
+.theseinfothatidontunderstand{
+	font-size: 18px;
+	color: #585858;
+}
+.the-city{
+	font-size: 18px;
+}
+
+.main-Evaluation-pres{
+	font-weight: bold;
+	font-size: 30px;
+	letter-spacing: 1px;
+	color: #01DFD7;
+	display: inline-block;
+
+}
+
+.user-img{
+	position: relative;
+	width: 60px;
+	height: 60px;
+	margin-top: 30px;
+	border-radius: 50px;
+}
+
+.user-img img{
+	position: relative;
+	object-fit: cover;
+	border-radius: 50px;
+	width: 100%;
+	height: 100%;
+}
+
+.user-name{
+	font-size: 15px;
+	display: inline-block;
+	width: 100%;
+}
+
+.all-components{
+	border:solid 1px #E6E6E6;
+	border-radius: 2px;
+}
+
+.components-list{
+	position: relative;
+	left: 10px;
+	list-style: none;
+
+}
+
+.components-list li{
+	display: inline-block;
+	padding-right: 5px;
+	padding-left:5px;
+	margin: 10px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 130px;
+	font-size: 15px;
+}
+
+
+.location-map{
+	padding:0px;
+	margin:0px;
+	margin-top: 20px;
+	width: 100%;
+	height: 350px;
+}
+
+.location-info{
+	margin-top: 10px;
+	border:none;
+	border-left: solid 2px #01DFD7; 
+}
+.location-info2{
+	border:none;
+}
+
+/*------CAURUSEL-----*/
+.car-main{
+	width: 100%;
+}
+.car-item{
+	width: 100%;
+	height: 400px;
+}
+.car-item-img{
+	object-fit: cover;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+/*--- LO MENOR DEL ALOJAMIENTO--*/
+
+.acco{
+	border:solid 1px #D8D8D8;
+	border-radius: 10px;
+	padding: 25px;
+}
+
+.acco div{
+	margin-top: 10px;
+}
+
+.acco-tittle{
+	font-weight: bold;
+}
+
+.opinion button{
+	background-color: #fff;
+	border:none;
+}
+
+.spot-info{
+	padding-top: 20px;
+	margin-top: 20px;
+	
+}
+
+.spot-info-table{
+	border-top:solid 1px #D8D8D8;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px; 
+	padding-bottom:0px;
+}
+
+.spot-info-table div{
+	font-weight: bold;
+	font-size: 17px;
+	margin-bottom:5px ; 
+}
+/*---- SERIVIOS----*/
+
+.services{
+	position: relative;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 20px;
+	border-top: solid 1px #D8D8D8;
+	border-bottom: solid 1px #D8D8D8;
+
+
+}
+
+.prin-service{
+	font-size: 15px;
+	height: 30px;
+	margin-bottom: 20px; 
+	margin-top: 10px;
+}
+
+
+/*----MODAL DE LOS SERVICIOS---*/
+
+.ser-basic-list li{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-weight: bold;
+	font-size: 19px;
+}
+
+.service-sub-info{
+	position: relative;
+	font-weight: normal;
+	font-size: 13px;
+	color: #585858;
+}
+
+.service-info{
+	margin: 5px;
+	margin-top: 20px;
+	padding-top: 10px;
+	text-align: justify;
+	border-top: solid 1px #D8D8D8;
+}
+
+.no-are{
+	text-decoration-line: line-through;
+}
+
+
+/*----------EVALUACIONES---*/
+.evaluations-commentaries {
+	margin-top: 50px;
+}
+.evaluations{
+	margin-top: 10px;
+	padding-top:15px;
+	padding-bottom:5px;
+	border-top:solid 1px #D8D8D8;
+}
+
+.evaluations div{
+	background-color: #fff
+}
+
+.evaluations div h4{
+	margin-right: 10px;
+}
+
+.evaluations div h4, .main-Evaluation{
+	display: inline-block;
+}
+
+.main-Evaluation{
+	font-weight: bold;
+	font-size: 25px;
+	color: #01DFD7;
+}
+
+.eva-parameters{
+	padding: 0px;
+	margin-top: 15px;
+	padding-bottom:16px; 
+}
+
+.com-par{
+	margin-top:7px; 
+	margin-bottom:7px;
+}
+
+.parameter{
+	font-size: 18px;
+}
+
+.parameter-calification{
+	text-align: right;
+	padding-right: 30px;
+}
+
+.parameter-calification span{
+	color: #01DFD7;
+}
+
+.ccmm{
+	margin-top: 30px; 
+}
+
+
+.commentary{
+	position: relative;
+	width: 100%;
+	padding-top:15px;
+	margin-bottom: 30px;
+	padding-bottom: 15px;
+	border-radius: 1px;
+}
+
+.commentary-autor-img{
+	height: 65px;
+	width: 65px;
+	margin: auto;
+	border-radius: 50px;
+}
+
+.commentary-autor-name, .post-date{
+	margin: auto;
+	display: block;
+	text-align: center; 
+	font-size: 16.5px;
+}
+
+.post-date{
+	font-size: 10px;
+}
+
+.commentary-autor-name{
+	margin-top: 5px;
+	color: #04B4AE;
+}
+.commentary-autor-img img{
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	border-radius: 50px;
+}
+
+.commentary-content{
+	max-height: 180px;
+	overflow-y: auto; 
+	padding: 10px;
+	font-size: 15px;
+	border: solid 1px #E6E6E6;
+}
+
+.commentary-content::-webkit-scrollbar {
+	width: 7px;
+}
+
+.commentary-content::-webkit-scrollbar-thumb{
+	background-color: #E6E6E6;
+}
+
+/*---ANFITRION INFO---------*/
+.arw{
+	margin-top: 40px;
+}
+.amphi-rel{
+	border-top: solid 1px #E6E6E6;
+	border-bottom: solid 1px #E6E6E6;
+	padding: 20px;
+}
+.amphi-rel-info{
+	margin-top: 30px;
+}
+.amphi-img{
+	position: relative;
+	width: 95px;
+	height: 95px;
+	display: inline-block;
+	bottom: 20px;
+}
+
+.amphi-img img{
+	object-fit: cover;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-radius: 50px;
+}
+
+.amphi-name{
+	margin-left: 10px;
+	display: inline-block;
+}
+
+.amphi-eva{
+	color: #01DFD7;
+}
+.amphi-cer{
+	color: #FFBF00;
+	margin-left: 15px;
+}
+.amphi-info{
+	font-size: 18px;
+	padding: 10px;
+}
+
+.amphi-des{
+	margin-top: 20px;
+	font-size: 16.5px;
+}
+.amphi-des-con{
+	padding: 18px;
+	border: solid 1px #E6E6E6;
+}
+/*--------POLITICAS Y CANCELACION-----*/
+
+.policies{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.policies ul{
+	margin-top: 20px;
+	list-style: none;
+	font-size: 16px;
+	border-left: solid 2px #01DFD7;
+}
+
+.policy{
+	padding-top:3px;
+	padding-bottom:4px; 
+}
+.more-policy{
+	margin-top: 2px;
+	border: none;
+}
+
+.cancelations-container{
+	border-top: solid 1px #D8D8D8;
+	margin-top: 15px;
+	padding-top: 20px; 
+	padding-bottom: 20px;
+	margin-bottom: 5px;
+}
+
+.can-con{
+	padding-left: 40px;
+	margin-top: 20px;
+	border-left: solid 2px #01DFD7;
+	font-size: 18px;
+}
+
+.can-con span{
+	font-weight: bold;
+}
+/*----------ASIDE-------*/
+
+aside{
+
+}
+
+.ems{
+	border-bottom: solid 1px #E6E6E6;
+}
+.aside{
+	padding:0px;
+	position: sticky;
+	width: 100%;
+	top: 15px;
+	background-color: #fff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.aside2{
+	background-color: #fafafa;
+	height: 76px;
+	color: #fff;
+	border-radius: 2px;
+}
+
+.book{
+	position: relative;
+	margin-top: 0px;
+	border: solid 1px #E6E6E6;
+}
+
+.book-price{
+	display: inline-block;
+	padding:5px;
+	margin-left: 15px;
+	margin-top: 0px; 
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.book-price-des{
+	font-size: 15px;
+}
+
+.book-form{
+	position: relative;
+	padding: 10px;
+}
+
+.book-dates{
+	margin-top: 10px;
+	padding: 10px;
+	border-bottom: solid 1px #E6E6E6;
+	padding-bottom: 20px;
+	margin-bottom: 1px;
+}
+
+.book-dates span{
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.bd-buttons{
+	margin-top: 10px; 
+}
+
+.btn-arrive{
+	position: relative;
+	border-radius: 1px;
+	width: 130px;
+}
+
+
+.host-form{
+	margin: 10px;
+	padding: 5px;
+	border-bottom: solid 1px #E6E6E6;
+}
+
+.host-form span{
+	font-weight: bold;
+	font-size: 19px;
+}
+
+.htcn{
+	margin-left: 10px;
+	margin-top: 10px;
+
+}
+
+.host-person{
+	font-size: 18px;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin-left: 10px;
+	margin-right: 20px;
+	border-top: solid 1px #E6E6E6;
+
+}
+.host-person div{
+	display: inline-block;
+	width: 53%;
+}
+
+.select-number{
+	width: 60px;
+	height: 35px;
+	display: inline-block;
+}
+
+.booked{
+	border-radius: 2px;
+}
+
+.more-serInfo, .more-locInfo, .more-poliInfon{
+	border-radius: 1px;
+}
+
+/*-------------CAROUSEL EN FOOTER--------------*/
+
+.exp-econ{
+	position: relative;
+	width: 100%;
+}
+
+.car-pex{
+
+}
+
+.cc-pn{
+	position: relative;
+	background-color: #fff;
+	border-radius: 50px;
+	padding: 20px;
+	color: #000;
+	font-size: 35px;
+	bottom: 40px;
+}
+
+.co, .co2{
+	display: inline-block;
+	padding: 10px;
+}
+
+.co2{
+	float: right;
+}
+
+
+.co-imn{
+	position: relative;
+	width: 100%; 
+}
+
+.co-img{
+	position: relative;
+	width: 100%;
+	height: 170px;
+	background-color: #F2F2F2;
+	overflow: hidden; 
+}
+
+.co-img img{
+	object-fit: contain;
+	width: 100%;
+	height: 100%;
+}
+
+.co-nmf{
+	height: 150px;
+}
+
+.co-addi{
+	font-size: calc(0.5rem + 0.8vw);
+}
+
+.co-nm{
+	font-size: calc(0.9rem + 1vw);
+}

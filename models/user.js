@@ -13,6 +13,7 @@ const UserSchema = new Schema({
   password: String,
   photo: String,
   about: String,
+  created : Date,
   gigs: [
     {
       type: Schema.Types.ObjectId,
